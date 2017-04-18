@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="demo-hello" />
+        <module name="demo-springloaded" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="demo-hello" target="1.8" />
+      <module name="demo-springloaded" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

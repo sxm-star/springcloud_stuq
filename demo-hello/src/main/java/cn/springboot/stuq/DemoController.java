@@ -43,6 +43,7 @@ public class DemoController {
         demoDTO = new DemoDTO();
         demoDTO.setAge(18);
         demoDTO.setName("xuanming song");
+        demoDTO.setRemark("备注");
         demoDTO.setCreateTime(new Date());
         return demoDTO;
     }

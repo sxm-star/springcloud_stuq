@@ -19,6 +19,6 @@ public class DemoDTO {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm")  //解决请求报错
     Date createTime;
 
-    @JSONField(deserialize = false)  //不想返回该字段信息,可以用这个注解的属性值
+    @JSONField(serialize = false)  //不想返回该字段信息,可以用这个注解的属性值
     String remark;
 }

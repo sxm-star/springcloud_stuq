@@ -79,7 +79,7 @@
                 </configuration>
             </plugin>
 
-            <!-- 热部署插件配置   开始-->
+            <!-- 热部署插件配置  开始-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

@@ -1,0 +1,7 @@
+ps:
+（1）在pom.xml中引入thymeleaf;
+（2）如何关闭thymeleaf缓存
+（3）编写模板文件.html    路径比较特殊
+（4）编写访问模板文件controller
+
+

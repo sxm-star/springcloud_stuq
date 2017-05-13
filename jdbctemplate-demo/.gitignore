@@ -1,1 +1,16 @@
 /target/
+/.idea/
+/.settings/
+/.classpath
+/.project
+/jdbctemplate-demo.iml
+.classpath
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.project
+.settings/
+jdbctemplate-demo.iml
+src/test/

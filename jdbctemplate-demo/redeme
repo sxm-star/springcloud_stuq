@@ -1,0 +1,28 @@
+ps
+(1)	在pom.xml加入jdbcTemplate的依赖；
+(2)	编写DemoDao类，声明为：@Repository，引入JdbcTemplate
+(3)	编写DemoService类，引入DemoDao进行使用
+(4)	编写Demo2Controller进行简单测试。
+
+1.添加依赖
+
+<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+
+如果在JPA已经加入的话，则可以不用引入以上的配置。
+<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+2.使用很简单
+那么只需要在需要使用的类中加入：
+@Resource
+private JdbcTemplate jdbcTemplate;
+
+
+
+
+

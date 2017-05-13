@@ -1,7 +1,42 @@
-ps:
+ps:thymeleaf
 （1）在pom.xml中引入thymeleaf;
 （2）如何关闭thymeleaf缓存
 （3）编写模板文件.html    路径比较特殊
 （4）编写访问模板文件controller
+
+
+ps:freemarker
+（1）在pom.xml中引入freemarker;
+（2）如何关闭freemarker缓存
+（3）编写模板文件.ftl
+（4）编写访问文件的controller
+		添加依赖
+		<dependency>
+		            <groupId>org.springframework.boot</groupId>
+		            <artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+		
+       配置项:
+       ########################################################
+		###FREEMARKER (FreeMarkerAutoConfiguration)
+		########################################################
+		spring.freemarker.allow-request-override=false
+		spring.freemarker.cache=true
+		spring.freemarker.check-template-location=true
+		spring.freemarker.charset=UTF-8
+		spring.freemarker.content-type=text/html
+		spring.freemarker.expose-request-attributes=false
+		spring.freemarker.expose-session-attributes=false
+		spring.freemarker.expose-spring-macro-helpers=false
+		#spring.freemarker.prefix=
+		#spring.freemarker.request-context-attribute=
+		#spring.freemarker.settings.*=
+		#spring.freemarker.suffix=.ftl
+		#spring.freemarker.template-loader-path=classpath:/templates/ #comma-separated list
+		#spring.freemarker.view-names= # whitelist of view names that can be resolved
+
+       		
+
+
 
 

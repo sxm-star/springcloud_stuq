@@ -46,13 +46,17 @@
 		</dependency>
 
 
-		<!-- thymeleaf-->
+		<!-- thymeleaf -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
-
+        <!--freemarker  -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
 		<!-- 1.添加相应的 Devtools依赖包 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

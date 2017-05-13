@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import cn.sxm.jpa.bean.User;
 import cn.sxm.jpa.repository.UserRepository;
+import cn.sxm.jpa.repository.UserRepository2;
 
 /**
  * 
@@ -18,6 +19,8 @@ public class UserService {
 	
 	@Resource
 	private UserRepository userRepository;
+	@Resource
+	private UserRepository2 UserRepository2;
 	
 	/**
 	 * save,update ,delete 方法需要绑定事务.
@@ -56,6 +59,24 @@ public class UserService {
 	
 	public User getUserById(Integer id){
 		return userRepository.findOne(id);
+	}
+	
+	/**
+	 * 
+	 * @param name
+	 * @return
+	 */
+	public User findByName(String name){
+		return UserRepository2.findByName(name);
+	}
+	
+	/**
+	 * JQL查询
+	 * @param name
+	 * @return
+	 */
+	public User findByName2(String name){
+		return UserRepository2.findMyUname(name);
 	}
 	
 }

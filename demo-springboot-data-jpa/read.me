@@ -52,6 +52,31 @@ public interface Repository<T, ID extends Serializable> { }
 5. 涉及查询条件时，条件的属性用条件关键字连接，要注意的是条件属性以首字母大写。
 6.使用@Query注解可以自定义JPQL语句实现更灵活的查询。
 
+5.CrudRepository 接口提供了最基本的对实体类的添删改查操作
+ --T save(T entity);//保存单个实体   
+  --Iterable<T> save(Iterable<? extends T> entities);//保存集合         
+  --T findOne(ID id);//根据id查找实体          
+  --boolean exists(ID id);//根据id判断实体是否存在          
+  --Iterable<T> findAll();//查询所有实体,不用或慎用!          
+  --long count();//查询实体数量          
+  --void delete(ID id);//根据Id删除实体          
+  --void delete(T entity);//删除一个实体   
+  --void delete(Iterable<? extends T> entities);//删除一个实体的集合          
+  --void deleteAll();//删除所有实体,不用或慎用!   
+
+6.PagingAndSortingRepository
+
+该接口提供了分页与排序功能   
+ --Iterable<T> findAll(Sort sort); //排序    
+--Page<T> findAll(Pageable pageable); //分页查询（含排序功能） 
+
+7.其他接口
+JpaRepository：查找所有实体，排序、查找所有实体，执行缓存与数据库同步
+
+JpaSpecificationExecutor：不属于Repository体系，实现一组 JPA Criteria 查询相关的方法，封装  JPA Criteria 查询条件。通常使用匿名内部类的方式来创建该接口的对象。
+
+自定义 Repository：可以自己定义一个MyRepository接口。
+
 
 
 

@@ -1,0 +1,12 @@
+springboot默认的json解析是jackon,要配置使用fastjon,须执行以下两种配置
+1.启动类继承 extends WebMvcConfigurerAdapter
+2.覆盖方法configureMessageConverters
+
+
+注意时间的请求与响应的处理,都可以直接 yyyy-MM-dd hh:mm的格式,请参看DemoDTO
+
+
+swagger-UI
+1.依赖  springfox-swagger2,springfox-swagger-ui
+2.实例化 Docket
+3.在启动类上添加  @EnableSwagger2

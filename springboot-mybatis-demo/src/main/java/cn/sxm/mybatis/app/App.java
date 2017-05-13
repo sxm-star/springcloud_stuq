@@ -8,6 +8,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -32,6 +33,7 @@ import java.util.List;
 @EnableSwagger2
 @EnableAutoConfiguration
 @MapperScan("cn.sxm.**.mapper")//这里和以往不一样的地方就是MapperScan的注解，这个是会扫描该包下的接口
+@EnableCaching
 public class App extends WebMvcConfigurerAdapter{
 
 

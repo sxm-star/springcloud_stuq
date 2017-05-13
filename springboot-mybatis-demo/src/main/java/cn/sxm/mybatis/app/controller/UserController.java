@@ -3,6 +3,7 @@ package cn.sxm.mybatis.app.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,6 +28,7 @@ public class UserController {
 	// 运行访问：http://127.0.0.1:8080/page/likeName?name=sxm&page=1&size=5
 	// 就可以看到返回的数据了
 	@RequestMapping("/page/likeName")
+	@Cacheable("page.likeName")
 	public List<User> likeNamePage(String name, int page, int size) {
 		log.info("page:{},size:{}", page, size);
 		PageHelper.startPage(page, size);

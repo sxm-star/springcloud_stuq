@@ -22,4 +22,16 @@ Spring Boot 集成Mybatis:
 9、使用PageHelper.startPage(pageNum,pageSize)进行分页；
 
 
+
+整合 mybatis,redis,
+1.添加依赖
+       <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-redis</artifactId>
+		</dependency>
+2.添加redis单机版配置
+		
+3.开启缓存
+在启动类上添加  @EnableCaching		注解
+在需要缓存的方法上添加 @Cacheable("page.likename")
    

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration >
+    <property resource="application.properties"/>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-1level [%X{}] %logger{15}:%line - %msg%n</pattern>
+            <immediateFlush>true</immediateFlush>
+        </encoder>
+    </appender>
+    
+    <logger name="com.aerospike.client" level="debug"/>
+    <logger name="org.jdbcdslog.StatementLogger" level="info" additivity="true"/>
+    <logger name="org.jdbcdslog.ResultSetLogger" level="info" additivity="false"/>
+
+    <logger name="cn.sxm.jpa.repository" level="DEBUG" />
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+</configuration>

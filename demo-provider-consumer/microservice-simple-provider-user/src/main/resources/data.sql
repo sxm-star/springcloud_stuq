@@ -1,0 +1,5 @@
+INSERT INTO user(id,username,name,age,balance) VALUES (1,'zhangsan1','张三1',12,1000.00)
+INSERT INTO user(id,username,name,age,balance) VALUES (2,'zhangsan2','张三2',13,1001.00)
+INSERT INTO user(id,username,name,age,balance) VALUES (3,'zhangsan3','张三3',14,1002.00)
+INSERT INTO user(id,username,name,age,balance) VALUES (4,'zhangsan4','张三4',15,1003.00)
+INSERT INTO user(id,username,name,age,balance) VALUES (5,'zhangsan5','张三5',16,1004.00)

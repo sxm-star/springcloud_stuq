@@ -1,4 +1,18 @@
+
 server:
   port: 7901
 
 uc.provider.path: http://127.0.0.1:7900/user/
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://song:xuanming123456@localhost:8761/eureka
+  instance:
+    ip-address: true
+
+
+spring:
+  application:
+    name: microservice-consumer-movie

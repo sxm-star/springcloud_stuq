@@ -27,6 +27,8 @@ logging:
 
 eureka:
   client:
+    healthcheck:
+      enabled: true
     service-url:
       defaultZone: http://song:xuanming123456@localhost:8761/eureka
   instance:

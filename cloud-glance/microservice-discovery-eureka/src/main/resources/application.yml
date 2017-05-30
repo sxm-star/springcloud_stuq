@@ -1,3 +1,9 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: song
+    password: xuanming123456
 server:
   port: 8761
 eureka:
@@ -5,4 +11,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://song:xuanming123456@localhost:8761/eureka

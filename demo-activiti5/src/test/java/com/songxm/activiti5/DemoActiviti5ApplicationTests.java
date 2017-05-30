@@ -32,4 +32,15 @@ public class DemoActiviti5ApplicationTests {
         ProcessEngine pe  =  pec.buildProcessEngine();
     }
 
+    @Test
+    public  void createTableWithXML()
+    {
+        //获取流程引擎配置
+        ProcessEngineConfiguration pec = ProcessEngineConfiguration.createProcessEngineConfigurationFromResource("activiti.cfg.xml");
+
+        //获取流程引擎对象
+        ProcessEngine pe  =  pec.buildProcessEngine();
+    }
+
+
 }

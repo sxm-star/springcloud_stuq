@@ -1,27 +1,23 @@
-package com.songxm.jms.component.activemq;
+package com.songxm.jms.component.subscribe_publish_topic.ManySubscribe;
 
-import com.songxm.jms.component.listener.JMSListener;
+import com.songxm.jms.component.subscribe_publish_topic.listener.JMSListener_Two;
 import org.apache.activemq.ActiveMQConnection;
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.springframework.stereotype.Component;
 
 import javax.jms.*;
 
 /**
  * @author: sxm
- * @date: 16/11/30 19:51
+ * @date: 17/5/30 20:51
  * @version: v1.0.0
  */
-@Component
-public class JMSConsumerTwo {
-    private static final String USERNAME= ActiveMQConnection.DEFAULT_USER;
+public class Subscribe_Two {
+    private static final String USERNAME = ActiveMQConnection.DEFAULT_USER;
     private static final String PASSWD = ActiveMQConnection.DEFAULT_PASSWORD;
-    private static final String BROKEURL= ActiveMQConnection.DEFAULT_BROKER_URL;
+    private static final String BROKEURL = ActiveMQConnection.DEFAULT_BROKER_URL;
     private static final int SENDNUM = 10;
 
-
     public static void main(String[] args) {
-
         ConnectionFactory connectionFactory;//连接工厂
         Connection connection = null;//连接
         Session session;//发送或者接受消息的线程
@@ -32,23 +28,15 @@ public class JMSConsumerTwo {
             connection = connectionFactory.createConnection();
             connection.start();
             session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);//创建session,TRUE标志位事务
-            destination = session.createQueue("First-Queue"); //创建消息队列
+            destination = session.createTopic("First-Queue"); //订阅者二 订阅topic
             messageConsumer = session.createConsumer(destination); //创建消息生产者
 
-           messageConsumer.setMessageListener(new JMSListener()); //注册消息监听
+            messageConsumer.setMessageListener(new JMSListener_Two()); //注册监听
+            while (true){
 
-
+            }
         } catch (JMSException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                if (connection != null) {
-                    connection.close();
-                }
-            } catch (JMSException e) {
-                e.printStackTrace();
-            }
-
         }
     }
 }

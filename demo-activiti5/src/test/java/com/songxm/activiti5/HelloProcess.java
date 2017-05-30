@@ -61,4 +61,13 @@ public class HelloProcess {
 			System.out.println("任务实例ID:"+ task.getProcessInstanceId());
 		}
 	}
+	
+	/**
+	 * 完成任务
+	 */
+	@Test
+	public void completeTask(){
+		processEngine.getTaskService()
+		.complete("10004");
+	}
 }

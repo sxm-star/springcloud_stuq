@@ -1,0 +1,4 @@
+server:
+  port: 7901
+
+uc.provider.path: http://127.0.0.1:7900/user/

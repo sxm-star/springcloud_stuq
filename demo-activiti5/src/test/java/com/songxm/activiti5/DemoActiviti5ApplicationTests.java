@@ -21,7 +21,7 @@ public class DemoActiviti5ApplicationTests {
         //获取流程引擎配置
         ProcessEngineConfiguration pec = ProcessEngineConfiguration.createStandaloneProcessEngineConfiguration();
         pec.setJdbcDriver("com.mysql.jdbc.Driver"); //配置驱动
-        pec.setJdbcUrl("jdbc:mysql://localhost:3306/db_activiti"); //配置连接地址
+        pec.setJdbcUrl("jdbc:mysql://localhost:3306/db_activiti5"); //配置连接地址
         pec.setJdbcUsername("root");
         pec.setJdbcPassword("root");
 
